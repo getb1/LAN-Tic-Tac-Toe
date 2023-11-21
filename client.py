@@ -42,10 +42,11 @@ class board:
 		
 		return [False]
 		
-	def sqLeft(self):
+	def sqLeft(self) ->bool:
 		for sq in self.b:
 			if sq=="_":
 				return True
+		return False
 	
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 	s.connect((HOST,PORT))

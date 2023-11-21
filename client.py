@@ -1,7 +1,7 @@
 import socket,pickle,time
 
 HOST=#Server IP
-port=6543
+PORT=6543
 FORMAT='UTF-8'
 
 def eq(a:str, b:str, c:str) ->bool:
@@ -48,7 +48,7 @@ class board:
 				return True
 	
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-	s.connect((HOST,port))
+	s.connect((HOST,PORT))
 	data=s.recv(1024)
 	print(data.decode('UTF-8'))
 	data=s.recv(1024)
